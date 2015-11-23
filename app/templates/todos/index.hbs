@@ -1,0 +1,8 @@
+<ul id="todo-list">
+	{{#each model as |todo|}}
+		<li class="completed">
+			<input type="checkbox" class="toggle">
+			<label>{{todo.titulo}}</label><button class="destroy"></button>
+		</li>
+	{{/each}}
+</ul>
