@@ -8,6 +8,9 @@ export default Ember.Component.extend({
         editTodo() {
             this.toggleProperty('editing');
         },
+        cancelEdit() {
+            this.set('editing', false);
+        },
         submitTodo() {
             let todo = this.get('todo');
             if (todo.get('titulo') === "") {

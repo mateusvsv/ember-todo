@@ -1,3 +1,5 @@
+import Mirage, {faker} from 'ember-cli-mirage';
+
 export default function() {  
     this.get('/todos', function(db, request) {
         return {
@@ -28,5 +30,9 @@ export default function() {
             }
         };
     });
-    this.del('/todos/:id');
+    this.del('/todos/:id', (db, request) => {
+        let id = request.params.id;
+        db.todos.remove(id);
+        return new Mirage.Response(204, {}, {});
+    });
 }
