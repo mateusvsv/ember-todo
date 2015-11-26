@@ -1,7 +1,7 @@
-import Mirage, {faker} from 'ember-cli-mirage';
+import Mirage from 'ember-cli-mirage';
 
 export default function() {  
-    this.get('/todos', function(db, request) {
+    this.get('/todos', function(db) {
         return {
             data: db.todos.map(attrs => (
                 {type: 'todos', id: attrs.id, attributes: attrs }

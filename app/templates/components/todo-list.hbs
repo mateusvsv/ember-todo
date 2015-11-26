@@ -1,26 +1,22 @@
 <section id="main">  
     {{yield}}
 
-    <input type="checkbox" id="toggle-all">
 </section>
 
 <footer id="footer">  
     <span id="todo-count">
-        <strong>2</strong> todos left
+        <strong>{{incompletas}}</strong> {{label}}
     </span>
-    <ul id="filters">
+    <ul id="filters" style="margin-left: 10px;">
         <li>
-            <a href="all" class="selected">All</a>
+            {{#link-to "todos.index" activeClass="selected"}}Todas{{/link-to}}
         </li>
         <li>
-            <a href="active">Active</a>
+            {{#link-to "todos.incompleto" activeClass="selected"}}Em progresso{{/link-to}}
         </li>
         <li>
-            <a href="completed">Completed</a>
+            {{#link-to "todos.completo" activeClass="selected"}}Completas{{/link-to}}
         </li>
     </ul>
 
-    <button id="clear-completed">
-        Clear completed (1)
-    </button>
 </footer>
