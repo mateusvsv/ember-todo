@@ -23,6 +23,18 @@ module.exports = function(environment) {
       ENV['ember-cli-mirage'] = {
           enabled: false
       }
+      ENV['contentSecurityPolicy'] = {
+          'default-src': "*",
+          'script-src': "*",
+          'font-src': "*",
+          'connect-src': "*",
+          'img-src': "*",
+          'style-src': "*",
+          'media-src': "*",
+          'frame-src': "*",
+          'object-src': "*"
+      }
+
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
