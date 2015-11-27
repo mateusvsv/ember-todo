@@ -6,10 +6,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-    this.route('todos', {path: '/'}, function() {
-      this.route('completo');
-      this.route('incompleto');
-    });
+  this.route('todos', {path: '/'}, function() {
+    this.route('completo');
+    this.route('incompleto');
+  });
+  this.route('usuarios');
 });
 
 export default Router;
