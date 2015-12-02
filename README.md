@@ -3,6 +3,11 @@
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
+# Atenção
+
+A listagem de tarefas não está funcionando, os models de Todos são preenchidos mas
+não estão sendo listados :(
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
