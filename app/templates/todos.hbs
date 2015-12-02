@@ -1,5 +1,5 @@
-{{todo-input action="createTodo"}}
+{{todo-input action="createTodo"}}{{select-usuarios usuarios=usuarios}}
 
-{{#todo-list todos=model}}
+{{#todo-list todos=todos}}
     {{outlet}}
 {{/todo-list}}

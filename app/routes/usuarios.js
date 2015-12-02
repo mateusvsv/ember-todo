@@ -1,5 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-    let usuarios = []
+    model(){
+       return this.store.findAll('usuario');
+    }
 });
